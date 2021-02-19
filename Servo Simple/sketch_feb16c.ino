@@ -3,14 +3,10 @@
 #define PIN       2 
 #define NUM_LEDS 32
  
-// Parameter 1 = number of pixels in strip
-// Parameter 2 = pin number (most are valid)
-// Parameter 3 = pixel type:
-//   NEO_GRB  Pixels are wired for GRB bitstream (most NeoPixel products)
-//   NEO_RGB  Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
+
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIN, NEO_GRB);
  
-uint32_t color = strip.Color(43, 137, 219); // Change RGB color value here
+uint32_t color = strip.Color(43, 137, 219); // Change RGB color
  
 // These are the pixels in order of animation-- 32 pixels in total:
 int sine[] = {
@@ -20,7 +16,7 @@ int sine[] = {
 void setup() {
   strip.begin();
   strip.show();            // Initialize all pixels to 'off'
-  strip.setBrightness(180); // 40/255 brightness (about 15%)
+  strip.setBrightness(180); 
 }
  
 void loop() {
